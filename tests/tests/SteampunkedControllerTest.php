@@ -8,11 +8,49 @@ require __DIR__ . "/../../vendor/autoload.php";
  * @cond 
  * @brief Unit tests for the class 
  */
-class EmptyTest extends \PHPUnit_Framework_TestCase
+use Steampunked\Steampunked as Steampunked;
+use Steampunked\SteampunkedController as SteampunkedController;
+
+class SteampunkedControllerTest extends \PHPUnit_Framework_TestCase
 {
-	public function test1() {
-		//$this->assertEquals($expected, $actual);
+	const SEED = 1234;
+
+	public function test_construct() {
+		//test instance
+		$steampunked = new Steampunked(self::SEED);
+		$controller = new SteampunkedController($steampunked, array());
+		$this->assertInstanceOf('Steampunked\SteampunkedController', $controller);
+
+		//test give up
+		$steampunked = new Steampunked(self::SEED);
+		$controller = new SteampunkedController($steampunked, array('giveup' => 'Give Up'));
+		$this->assertTrue($controller->isReset());
+		$this->assertEquals('winning.php', $controller->getPage());
+
+		//test rotate
+		$steampunked = new Steampunked(self::SEED);
+		$controller = new SteampunkedController($steampunked, array('rotate' => 'Rotate'));
+		$this->assertFalse($controller->isReset());
+		$this->assertEquals('steampunked.php', $controller->getPage());
+
+		//test discard
+		$steampunked = new Steampunked(self::SEED);
+		$controller = new SteampunkedController($steampunked, array('discard' => 'Discard'));
+		$this->assertFalse($controller->isReset());
+		$this->assertEquals('steampunked.php', $controller->getPage());
+
+		//test open valve
+		$steampunked = new Steampunked(self::SEED);
+		$controller = new SteampunkedController($steampunked, array('openvalve' => 'Open Valve'));
+		$this->assertFalse($controller->isReset());
+		$this->assertEquals('winning.php', $controller->getPage());
+
+
 	}
+
+
+
+
 }
 
 /// @endcond
