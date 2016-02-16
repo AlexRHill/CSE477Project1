@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="da5e9e78-ea14-4423-b270-00ea125e0757" name="project1check" url="http://webdev.cse.msu.edu/~hillale5/project1check">
+        <fileTransfer host="arctic.cse.msu.edu" port="22" rootFolder="/user/hillale5/classweb/project1check" accessType="SFTP" username="hillale5">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
