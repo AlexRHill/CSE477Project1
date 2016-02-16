@@ -15,7 +15,7 @@ class SteampunkedController
     /**
      * Constructor
      * @param Steampunked $steampunked The Steampunked object
-     * @param $$post The $_POST array
+     * @param $post The $_POST array
      */
     public function __construct(Steampunked $steampunked, $post)
     {
@@ -25,9 +25,7 @@ class SteampunkedController
             $this->page = "winning.php";
         } else if(isset($post['rotate'])) {
             $this->rotate();
-
         }
-
     }
 
     public function getPage() {
@@ -39,11 +37,12 @@ class SteampunkedController
     }
 
     public function rotate() {
+        
     }
 
 
     private $steampunked;                // The Steampunked object we are controlling
-    private $page = 'steampuncked.php';     // The next page we will go to
+    private $page = 'steampunked.php';     // The next page we will go to
     private $reset = false;         // True if we need to reset the game
 
 }
