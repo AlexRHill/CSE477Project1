@@ -50,14 +50,63 @@ img.title {
 }
 
 div.gameboard{
-    float: right;
-    right: 50%;
-    position: relative;
+    justify-content: center;
+    display: flex;
 }
 
-div.game{
-    float: right;
-    right: -50%;
-    position: relative;
+div.gameButtons, div.gamePieces{
+    text-align: center;
 }
 
+div.gameButtons > input{
+    margin-top: 0.5em;
+    margin-left: 0.5em;
+}
+
+div.playerMessage{
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+div.playerMessage > p{
+    font-size: 2em;
+}
+
+button[value="New Game"] {
+    margin: 0 auto;
+    display: block;
+}
+
+button[value="How To Play"] {
+    margin: 0 auto;
+    margin-top: 1em;
+    display: block;
+}
+
+a.welcomeBtn{
+    text-decoration: none;
+}
+
+div.howToPlay{
+    display: block;
+    margin: 0 auto;
+    width: 30em;
+}
+
+div.howToPlay > p{
+    margin-bottom: 1em;
+}
+
+p.htpTitle{
+    font-size: 2em;
+    text-align: center;
+    font-weight: bold;
+}
+
+div.teamDetails{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    display: block;
+    margin: 0 auto;
+    width: 30em;
+}
