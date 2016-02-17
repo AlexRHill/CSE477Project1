@@ -29,11 +29,13 @@ class SteampunkedTest extends \PHPUnit_Framework_TestCase
 
         $steampunked = new Steampunked(self::SEED);
 
-        $steampunked->setSize(10,10);
+        $steampunked->setSize(12,10);
 
 
         $this->assertEquals(10,$steampunked->getHeight());
-        $this->assertEquals(10,$steampunked->getWidth());
+        $this->assertEquals(12,$steampunked->getWidth());
+
+        //The sizes should be different to ensure that the getters fetch the correct size
 
     }
 
