@@ -15,7 +15,7 @@ class SteampunkedControllerTest extends \PHPUnit_Framework_TestCase
 
 	public function test_construct() {
 		//test instance
-		$steampunked = new Steampunked(self::SEED, 6, 6);
+		$steampunked = new Steampunked(self::SEED);
 		$controller = new SteampunkedController($steampunked, array());
 		$this->assertInstanceOf('Steampunked\SteampunkedController', $controller);
 

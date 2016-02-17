@@ -16,38 +16,42 @@ class SteampunkedTest extends \PHPUnit_Framework_TestCase
 
 	public function testConstructor() {
 
-		$steampunk = new Steampunked(self::SEED,10,10);
+		$steampunked = new Steampunked(self::SEED);
 
-        $this->assertInstanceOf('Steampunked',$steampunk);
+        $steampunked->setSize(10,10);
+
+        $this->assertInstanceOf('Steampunked',$steampunked);
 
 
 	}
 
     public function testGetters() {
 
-        $steampunk = new Steampunked(self::SEED,12,10);
+        $steampunked = new Steampunked(self::SEED);
+
+        $steampunked->setSize(10,10);
 
 
-        $this->assertEquals(10,$steampunk->getHeight());
-        $this->assertEquals(12,$steampunk->getWidth());
+        $this->assertEquals(10,$steampunked->getHeight());
+        $this->assertEquals(10,$steampunked->getWidth());
 
     }
 
     public function testTurns() {
 
-        $steampunk = new Steampunked(self::SEED,10,10);
+        $steampunked = new Steampunked(self::SEED);
+        $steampunked->setSize(10,10);
 
         //The game should start with Player 1's turn by default
-        $this->assertEquals(1,$steampunk->getTurn());
+        $this->assertEquals(1,$steampunked->getTurn());
 
         //Tests changing from turn 1 to turn 2
-        $steampunk->nextTurn();
-        $this->assertEquals(2,$steampunk->getTurn());
+        $steampunked->nextTurn();
+        $this->assertEquals(2,$steampunked->getTurn());
 
         //Tests changing from turn 2 to turn 1;
-        $steampunk->nextTurn();
-        $this->assertEquals(1,$steampunk->getTurn());
-
+        $steampunked->nextTurn();
+        $this->assertEquals(1,$steampunked->getTurn());
 
     }
 }

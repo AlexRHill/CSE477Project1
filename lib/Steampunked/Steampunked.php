@@ -12,11 +12,9 @@ namespace Steampunked;
 class Steampunked
 {
 
-    public function __construct($seed = null, $width, $height){
+    public function __construct($seed = null){
 
     }
-
-
 
     //returns the width of the grid
     public function getWidth(){
@@ -36,6 +34,11 @@ class Steampunked
     //changes the turn from player 1 to 2 or vice versa
     public function nextTurn(){
 
+    }
+
+    public function setSize($width, $height){
+        $this->width = $width;
+        $this->height = $height;
     }
 
     private $seed;
