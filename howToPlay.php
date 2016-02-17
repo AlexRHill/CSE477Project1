@@ -30,7 +30,7 @@
     <p>Alex Hill</p>
     <p>Nan Liu</p>
 
-    <p>Team Name: N/A</p>
+    <p>Team Name: Pickpockets</p>
 </div>
 
 <a class="welcomeBtn" href="steampunked.php"><button name="newGame" value="New Game">New Game</button></a>
