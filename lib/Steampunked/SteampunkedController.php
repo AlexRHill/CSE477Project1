@@ -14,21 +14,19 @@ class SteampunkedController
     /**
      * Constructor
      * @param Steampunked $steampunked The Steampunked object
-     * @param $post The $_POST array
+     * @param $post $_POST array
      */
     public function __construct(Steampunked $steampunked, $post)
     {
         $this->steampunked = $steampunked;
         if (isset($post['giveup'])) {
             $this->reset = true;
-            $this->page = "winning.php";
         } else if (isset($post['rotate'])) {
             $this->rotate();
         } else if (isset($post['discard'])) {
             $this->discard();
         } else if (isset($post['openvalve'])) {
             $this->openValve();
-            $this->page = "winning.php";
         }
     }
 
