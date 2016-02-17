@@ -2,15 +2,13 @@
 
 require __DIR__ . "/../../vendor/autoload.php";
 
-
-/** @file
- * @brief Empty unit testing template
- * @cond 
- * @brief Unit tests for the class 
- */
 use Steampunked\Steampunked as Steampunked;
 use Steampunked\SteampunkedController as SteampunkedController;
 
+/** @file
+ * @brief Unit tests for the class SteampunkedController
+ * @cond
+ */
 class SteampunkedControllerTest extends \PHPUnit_Framework_TestCase
 {
 	const SEED = 1234;
