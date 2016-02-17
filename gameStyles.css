@@ -42,3 +42,22 @@ div.game div.cell {
     min-height: 50px;
     min-width: 50px;
 }
+
+img.title {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.gameboard{
+    float: right;
+    right: 50%;
+    position: relative;
+}
+
+div.game{
+    float: right;
+    right: -50%;
+    position: relative;
+}
+
