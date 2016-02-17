@@ -12,4 +12,11 @@ namespace Steampunked;
 class Steampunked
 {
 
+    public function __construct($seed = null, $width, $height){
+
+    }
+
+    private $seed;
+    private $width;
+    private $height;
 }

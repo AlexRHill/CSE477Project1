@@ -11,7 +11,6 @@ namespace Steampunked;
 
 class SteampunkedController
 {
-
     /**
      * Constructor
      * @param Steampunked $steampunked The Steampunked object

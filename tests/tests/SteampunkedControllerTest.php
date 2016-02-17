@@ -2,22 +2,20 @@
 
 require __DIR__ . "/../../vendor/autoload.php";
 
-
-/** @file
- * @brief Empty unit testing template
- * @cond 
- * @brief Unit tests for the class 
- */
 use Steampunked\Steampunked as Steampunked;
 use Steampunked\SteampunkedController as SteampunkedController;
 
+/** @file
+ * @brief Unit tests for the class SteampunkedController
+ * @cond
+ */
 class SteampunkedControllerTest extends \PHPUnit_Framework_TestCase
 {
 	const SEED = 1234;
 
 	public function test_construct() {
 		//test instance
-		$steampunked = new Steampunked(self::SEED);
+		$steampunked = new Steampunked(self::SEED, 6, 6);
 		$controller = new SteampunkedController($steampunked, array());
 		$this->assertInstanceOf('Steampunked\SteampunkedController', $controller);
 
