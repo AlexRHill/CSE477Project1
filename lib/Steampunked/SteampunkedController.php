@@ -20,11 +20,16 @@ class SteampunkedController
     public function __construct(Steampunked $steampunked, $post)
     {
         $this->steampunked = $steampunked;
-        if(isset($post['giveup'])) {
+        if (isset($post['giveup'])) {
             $this->reset = true;
             $this->page = "winning.php";
-        } else if(isset($post['rotate'])) {
+        } else if (isset($post['rotate'])) {
             $this->rotate();
+        } else if (isset($post['discard'])) {
+            $this->discard();
+        } else if (isset($post['openvalve'])) {
+            $this->openValve();
+            $this->page = "winning.php";
         }
     }
 
@@ -39,8 +44,13 @@ class SteampunkedController
     public function rotate() {
 
     }
+    public function discard(){
 
+    }
 
+    public function openValve(){
+
+    }
     private $steampunked;                // The Steampunked object we are controlling
     private $page = 'steampunked.php';     // The next page we will go to
     private $reset = false;         // True if we need to reset the game
