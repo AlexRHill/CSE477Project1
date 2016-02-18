@@ -13,7 +13,7 @@
 <a class="welcomeBtn" href="howToPlay.php"><button name="howToPlay" value="How To Play">How To Play</button></a>
 
 <div class="gameboard">
-    <form action="#">
+    <form method="post" action="#">
         <div class="game">
             <div class="row">
                 <div class="cell"><img src="images/valve-closed.png"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"><img src="images/gauge-top-0.png"></div>
@@ -42,7 +42,7 @@
 </div>
 
 <div class="gamePieces">
-    <form action="">
+    <form method="post" action="steampunked-post.php">
         <input type="radio" name="piece" value="first" checked> <img src="images/ninety-es.png">
         <input type="radio" name="piece" value="second"> <img src="images/ninety-ne.png">
         <input type="radio" name="piece" value="third"> <img src="images/ninety-sw.png">
