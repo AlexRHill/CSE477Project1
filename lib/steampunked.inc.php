@@ -15,4 +15,4 @@ if(isset($_GET['seed'])) {
     $_SESSION[STEAMPUNKED_SESSION] = new Steampunked\Steampunked(strip_tags($_GET['seed']));
 }
 
-$guessing = $_SESSION[STEAMPUNKED_SESSION];
+$steampunked = $_SESSION[STEAMPUNKED_SESSION];
