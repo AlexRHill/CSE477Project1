@@ -20,7 +20,7 @@ class SteampunkedTest extends \PHPUnit_Framework_TestCase
 
         $steampunked->setSize(10,10);
 
-        $this->assertInstanceOf('Steampunked',$steampunked);
+        $this->assertInstanceOf('Steampunked\Steampunked',$steampunked);
 
 
 	}
