@@ -33,6 +33,11 @@ class Steampunked
 
     //changes the turn from player 1 to 2 or vice versa
     public function nextTurn(){
+        if ($this->turn==1){
+            $this->turn=2;
+        } else{
+            $this->turn=1;
+        }
 
     }
 
@@ -44,5 +49,5 @@ class Steampunked
     private $seed;
     private $width;
     private $height;
-    private $turn;  //whose turn it is
+    private $turn=1;  //whose turn it is
 }
