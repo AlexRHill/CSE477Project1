@@ -47,7 +47,7 @@ class SteampunkedController
     }
 
     public function openValve(){
-        $this->page = "winning.php";
+
 
     }
     private $steampunked;                // The Steampunked object we are controlling
