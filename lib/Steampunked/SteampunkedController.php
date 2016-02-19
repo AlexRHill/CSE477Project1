@@ -20,6 +20,7 @@ class SteampunkedController
     {
         $this->steampunked = $steampunked;
         if (isset($post['giveup'])) {
+            $this->page = "winning.php";
             $this->reset = true;
         } else if (isset($post['rotate'])) {
             $this->rotate();
@@ -46,6 +47,7 @@ class SteampunkedController
     }
 
     public function openValve(){
+        $this->page = "winning.php";
 
     }
     private $steampunked;                // The Steampunked object we are controlling
