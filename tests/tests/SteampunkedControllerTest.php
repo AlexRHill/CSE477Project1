@@ -23,7 +23,7 @@ class SteampunkedControllerTest extends \PHPUnit_Framework_TestCase
 		$steampunked = new Steampunked(self::SEED);
 		$controller = new SteampunkedController($steampunked, array('giveup' => 'Give Up'));
 		$this->assertTrue($controller->isReset());
-		$this->assertEquals('winning.php', $controller->getPage());
+		$this->assertEquals('steampunked.php', $controller->getPage());
 
 		//test rotate
 		$steampunked = new Steampunked(self::SEED);
@@ -41,7 +41,7 @@ class SteampunkedControllerTest extends \PHPUnit_Framework_TestCase
 		$steampunked = new Steampunked(self::SEED);
 		$controller = new SteampunkedController($steampunked, array('openvalve' => 'Open Valve'));
 		$this->assertFalse($controller->isReset());
-		$this->assertEquals('winning.php', $controller->getPage());
+		$this->assertEquals('steampunked.php', $controller->getPage());
 
 
 	}
